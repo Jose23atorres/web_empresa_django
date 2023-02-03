@@ -20,6 +20,8 @@ from django.urls import path, include
 urlpatterns = [
     #Paths de la app core
     path('', include('core.urls')),
+    #Paths de la app services
+    path('services/', include('services.urls')),
     #Paths del admin
     path('admin/', admin.site.urls),
 ]
