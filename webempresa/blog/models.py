@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.timezone import now
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -23,7 +24,7 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=200,
         verbose_name="Título")
-    content = models.TextField(
+    content = RichTextField(
         verbose_name="Contenido")
     published = models.DateTimeField(default=now,
         verbose_name="Fecha de publicación")

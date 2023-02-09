@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from django.conf import settings
 
 urlpatterns = [
     #Paths de la app core
@@ -24,6 +24,8 @@ urlpatterns = [
     path('services/', include('services.urls')),
     #Paths de la app blog
     path('blog/', include('blog.urls')),
+    #Paths de la app pages
+    path('page/', include('pages.urls')),
     #Paths del admin
     path('admin/', admin.site.urls),
 ]
